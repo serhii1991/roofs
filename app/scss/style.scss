@@ -1,11 +1,272 @@
 @import "vars";
 @import "libs";
 @import "fonts";
+@import "global";
 
+/*********************************************************************************
+*******************************			HEADER 			**********************************
+**********************************************************************************/
 
+.header {
+	padding: 15px 0 22px;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__logo {
+		width: 170px;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__contact {
+		padding-left: 35px;
+		display: flex;
+		justify-content: flex-end;
+		font-weight: 600;
+		a {
+			span {
+				color: $red;
+			}
+			& + a {
+				margin-left: 20px;
+			}
+		}
+	}
+	&__menu {
+		display: flex;
+		li {
+			&:hover {
+				a {
+					color: $red;
+				}
+			}
+			& + li {
+				margin-left: 55px;
+			}
+		}
+	}
+}
 
+/*********************************************************************************
+*******************************			BANNER 			**********************************
+**********************************************************************************/
 
+.banner {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 700px;
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 700px;
+	}
+	&__content {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 350px;
+		text-align: center;
+		max-width: 590px;
+		width: 100%;
+		padding: 60px 80px 0;
+	}
+	&__title {
+		font-size: 36px;
+		color: #fff;
+		padding-bottom: 22px;
+		margin-bottom: 17px;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 150px;
+			height: 1px;
+			background-color: #fff;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		span {
+			font-size: 64px;
+			text-transform: uppercase;
+			margin-bottom: 25px;
+			display: inline-block;
+		}
+	}
+	&__text {
+		font-size: 30px;
+		color: $btn;
+		margin-bottom: 17px;
+	}
+	&__price {
+		font-size: 26px;
+		color: #fff;
+	}
+}
 
+/*********************************************************************************
+*******************************			FORM 			************************************
+**********************************************************************************/
+
+.form {
+	padding: 100px 0;
+	&__inner {
+		max-width: 945px;
+		margin: 0 auto;
+		background-repeat: no-repeat;
+		background-position: 350px bottom;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__description {
+		max-width: 310px;
+		width: 100%;
+		padding-left: 40px;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: -70px;
+			width: 264px;
+			height: 440px;
+			background-image: url(../img/form-arrow.png);
+		}
+		span {
+			display: block;
+		}
+	}
+	form {
+		max-width: 365px;
+		width: 100%;
+		background-color: #eee3d3;
+		border-radius: 7px;
+		padding: 40px 20px;
+		text-align: center;
+		button {
+			background-color: $btn;
+			text-align: center;
+			width: 100%;
+			height: 40px;
+			border-radius: 5px;
+			border: none;
+			margin-top: 10px;
+			font-size: 24px;
+			font-family: "Lobster", sans-serif;
+			color: #fff;
+			cursor: pointer;
+			&:hover {
+				opacity: .9;
+			}
+		}
+	}
+	&__input {
+		position: relative;
+		.placeholder {
+			position: absolute;
+			left: 20px;
+			top: 10px;
+			display: none;
+			span {
+				color: $red;
+			}
+		}
+		input {
+			width: 100%;
+			margin-bottom: 15px;
+			border-radius: 5px;
+			height: 45px;
+			padding: 0 15px;
+			color: #000;
+			border: none;
+		}
+	}
+	&__title {
+		font-size: 30px;
+		color: $brown;
+		margin-bottom: 20px;
+	}
+	&__text {
+		margin-bottom: 20px;
+		font-weight: 300;
+	}
+}
+
+.span {
+	&-vacation {
+		font-size: 23px;
+		color: #463c31;
+		font-weight: 300;
+		padding: 20px 0;
+	}
+	&-tax {
+		font-family: "Lobster", sans-serif;
+		font-size: 33px;
+		margin-bottom: 15px;
+	}
+	&-price {
+		font-family: "Lobster", sans-serif;
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+	&-free {
+		font-family: "Lobster", sans-serif;
+		font-size: 59px;
+		color: $red;
+		margin-bottom: 45px;
+	}
+	&-quaranty {
+		font-size: 18px;
+		font-weight: 300;
+		color: #463c31;
+	}
+}
+
+/*********************************************************************************
+*****************************			SERVICES 			**********************************
+**********************************************************************************/
+
+.services {
+	padding: 80px 0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: #fff;
+	&__title {
+		margin-bottom: 70px;
+		font-size: 36px;
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-around;
+	}
+	&__item {
+		width: 280px;
+		&-image {
+			margin: 0 auto;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			border: 2px solid #fff;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin-bottom: 25px;
+		}
+		&-title {
+			font-size: 20px;
+			width: 240px;
+			margin: 0 auto;
+			margin-bottom: 15px;
+		}
+	}
+}
 
 
 
