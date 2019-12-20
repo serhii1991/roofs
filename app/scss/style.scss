@@ -641,6 +641,50 @@
 	}
 }
 
+/*********************************************************************************
+******************************			ABOUT 	  	**********************************
+**********************************************************************************/
+
+.about {
+	padding: 100px 0 70px;
+	&__title {
+		text-align: center;
+		font-size: 36px;
+		color: #222;
+		margin-bottom: 40px;
+	}
+	&__text {
+		position: relative;
+		margin-bottom: 50px;
+		.shadow {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			background-image: linear-gradient(to top, #fff, transparent);
+		}
+	}
+	&__link {
+		text-align: center;
+		a {
+			padding-right: 25px;
+			position: relative;
+			&:hover {
+				border-bottom: solid 1px #444;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 10px;
+				width: 15px;
+				height: 7px;
+				background-image: url(../img/icons/arrow-down.png);
+			}
+		}
+	}
+}
+
 
 
 @import "media";
