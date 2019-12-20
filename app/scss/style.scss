@@ -519,6 +519,59 @@
 	}
 }
 
+/*********************************************************************************
+****************************			WORK-PRICE 	  	********************************
+**********************************************************************************/
+
+.work-price {
+	padding: 100px 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	&__title {
+		text-align: center;
+		font-size: 36px;
+		color: #222;
+		margin-bottom: 25px;
+		span {
+			color: $red;
+		}
+	}
+	&__text {
+		text-align: center;
+		margin-bottom: 45px;
+		span {
+			color: $red;
+		}
+	}
+	&__table {
+		display: flex;
+		justify-content: space-between;
+		background-color: #fff;
+		table {
+			max-width: 555px;
+			border: solid 1px #dbdbdb;
+			border-collapse: collapse;
+			width: 100%;
+			tr {
+				&:nth-child(even) {
+					background-color: #f5f5f5;
+				}
+			}
+			td {
+				border: solid 1px #dbdbdb;
+				height: 70px;
+				padding: 0 20px;
+				&.name {
+					width: 65%;
+				}
+				&.price {
+					width: 35%;
+				}
+			}
+		}
+	}
+}
+
 
 
 @import "media";
