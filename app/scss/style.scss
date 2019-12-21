@@ -116,7 +116,8 @@
 **********************************************************************************/
 
 .form,
-.count {
+.count,
+.contact {
 	padding: 100px 0;
 	&__inner {
 		max-width: 945px;
@@ -647,6 +648,7 @@
 
 .about {
 	padding: 100px 0 70px;
+	position: relative;
 	&__title {
 		text-align: center;
 		font-size: 36px;
@@ -683,8 +685,87 @@
 			}
 		}
 	}
+	.to-top {
+		position: absolute;
+		bottom: 45px;
+		right: 30px;
+		display: block;
+		width: 40px;
+		height: 40px;
+		img {
+			width: 100%;
+		}
+	}
 }
 
+/*********************************************************************************
+******************************			CONTACT 	  	********************************
+**********************************************************************************/
+.contact {
+	padding: 0;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1920px;
+	}
+	&__map {
+		max-width: 1170px;
+		width: 100%;
+		min-height: 600px;
+		iframe {
+			max-width: 1170px;
+			width: 100%;
+			min-height: 600px;
+			margin-bottom: -4px;
+		}
+	}
+	&__form {
+		max-width: 850px;
+		width: 100%;
+		min-height: 600px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 90px;
+	}
+}
 
+/*********************************************************************************
+******************************			FOOTER 	  	**********************************
+**********************************************************************************/
+.footer {
+	color: #bebebe;
+	padding: 60px 0;
+	background-color: #222;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__contact {
+		max-width: 320px;
+		width: 100%;
+		&-title {
+			margin-bottom: 10px;
+			text-align: center;
+		}
+		span {
+			a {
+				color: #bebebe;
+				&:hover {
+					color: #7d7575;
+				}
+				& + a {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+	&__copy {
+		width: 220px;
+		font-size: 14px;
+		line-height: 22px;
+	}
+}
 
 @import "media";
